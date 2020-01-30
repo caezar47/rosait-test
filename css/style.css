@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic');
+:root {
+  --sPrimary: #f7891f;
+  --sPrimaryHover: #ffc107;
+}
+html{
+	height: 100%;
+	/*opacity: 0.7;
+	background-image: url(../img/maket/XS.jpg);
+	background-image: url(../img/maket/MD.jpg);
+	background-image: url(../img/maket/LD.jpg);
+	background-position: top center;
+	background-repeat: no-repeat;*/
+}
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+.slider__section{
+}
+.slider__start{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 675px;
+	background-color: #c4cdd5;
+}
+.slider__start-btn{
+	background-color: var(--sPrimary);
+	border-color: var(--sPrimary);
+	text-transform: uppercase;
+	color: white;
+	padding: 10px 20px;
+}
+[data-slider-screen]{
+	display: none;
+}
+.carousel-control-prev{
+	justify-content: flex-start;
+}
+.carousel-control-next{
+	justify-content: flex-end;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+	width: 77px;
+	height: 85px;
+	font-size: 50px;
+	background-color: rgba(0, 0, 0, 0.1); 
+	background-image: none;
+	border-radius: 0 3px 3px 0;
+	transition: all 0.35s;
+}
+.carousel-control-prev-icon{
+	border-radius: 0 3px 3px 0;
+}
+.carousel-control-next-icon{
+	border-radius: 3px 0px 0 3px;
+}
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon{
+	background-color: rgba(0, 0, 0, 0.5); 
+}
+.carousel-item img{
+	height: 400px;
+    object-fit: cover;
+}
+.carousel-caption{
+	color: black;
+    padding: 0;
+    top: 30%;
+    bottom: inherit;
+    left: 0;
+    right: 0vw;
+    font-size: 1.33rem;
+}
+.carousel-caption p{
+	margin-bottom: 1.5rem;
+}
+.carousel__heading{
+	font-size: 1.85rem;
+    line-height: 1.3;
+    margin-bottom: 0.2rem;
+}
+.carousel__btn{
+	text-transform: uppercase;
+	padding: .68rem 1.75rem;
+	margin-right: .9rem;
+	background-color: rgba(0,0,0,0);
+} 
+.carousel__btn.is--warning{
+	background-color: var(--sPrimary);
+	border-color: var(--sPrimary);
+	color: white;	
+}
+.carousel__btn.is--warning:hover{
+	background-color: var(--sPrimaryHover);
+	border-color: var(--sPrimaryHover);
+	color: black;	
+}
+.carousel__btn.is--light{
+	border-color: black;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+.carousel-indicators{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	z-index: 5;
+	bottom: 7%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.carousel-indicators li{
+	opacity: 1;
+	box-sizing: border-box;
+	background-color: rgba(0,0,0,0);
+}
+@media (max-width: 767px) {	
+	html{
+		font-size: 13.5px;
+	}
+	.carousel-control-prev,
+	.carousel-control-next{
+		display: none;
+	}
+	.carousel-caption{
+		max-width: 340px;
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+	.carousel-indicators li{
+		width: 14px;
+		height: 14px;
+		border-radius: 50%;
+		border: 1px solid #282828;
+		margin: 0 9px;
+	}
+	.carousel-indicators li.active{
+		background-color: #282828;
+	}
+}
+@media (min-width: 768px) {	
+	.carousel__heading{
+		font-size: 2.62rem;    
+		line-height: 1.23;
+	    margin-bottom: 0.7rem;
+	}
+	.carousel-caption{
+	    text-align: left;
+	    padding: 0;
+	    top: 33.5%;
+	    bottom: inherit;
+	    left: 45.7vw;
+	    right: 15vw;
+	    font-size: 1.62rem;
+	}
+	.carousel-caption p{
+		margin-bottom: 1.2rem;
+	}
+	.carousel-item img{
+		height: 675px;
+	}
+	.carousel-indicators{
+		bottom: 3%;
+	}
+	.carousel-indicators li{
+		width: auto;
+		height: auto;
+		border-radius: 3px;
+		border: none;
+		background-color: rgba(0,0,0,.25);
+		padding: 0.35rem;
+		padding: 4px;
+		color: white;
+		display: flex;
+		align-items: center;
+		font-size: .73rem;
+		line-height: 1.1;
+		max-width: 275px;
+		transition: all .15s ease-in-out; 
+		cursor: pointer;
+		margin: 0 .5rem;
+	    text-indent: 0;
+	}
+	.carousel-indicators li.active{
+		background-color: rgba(0,0,0,.5);
+	}
+	.carousel-indicators li *{
+		margin-bottom: 0;
+	}
+	.carousel-indicators li img{
+		margin-right: 0.6rem;
+		border-radius: 3px; 
+	}
+	.carousel__indicators-heading{
+		margin: 5px 0;
+		font-weight: 700;
+		font-size: .8rem;
+	}
+	.carousel__btn.d-md-block{
+		display: inline-block !important;
+	} 
+}
+@media (min-width: 768px) and (max-width: 1199.98px) {
+	html{
+		font-size: 13.5px;
+	}
+	.carousel-caption{
+		left: 48.7vw;
+		right: 8vw;
+	}
+	.carousel__indicators{
+		bottom: 3.8%;
+	}
+	.carousel-item img{
+		object-position: 36% 0%;
+	}
+	.carousel__indicators-item img{
+		width: 40px;
+	}
+}
